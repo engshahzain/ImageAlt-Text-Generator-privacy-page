@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy – ImageAlt AI</title>
+    <meta
+      name="description"
+      content="How ImageAlt AI, a Shopify app by Enigma Systems, handles your store and image data."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1b1840;
+        --text: #3a3860;
+        --muted: #6d6b8f;
+        --paper: #f7f6ff;
+        --card: #ffffff;
+        --line: #dedcf3;
+        --brand: #5b54f0;
+        --brand-soft: #ebeaff;
+        --mint: #1fb58a;
+        --mint-soft: #dcf7ee;
+        --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+        --body:
+          "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --ink: #f1f0ff;
+          --text: #cfcdee;
+          --muted: #9a98c2;
+          --paper: #12102b;
+          --card: #1b1840;
+          --line: #322f66;
+          --brand: #8d88ff;
+          --brand-soft: #27235a;
+          --mint: #3fd3a6;
+          --mint-soft: #123d37;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--text);
+        font-family: var(--body);
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--brand);
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+      :focus-visible {
+        outline: 3px solid var(--brand);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* top bar */
+      .bar {
+        padding: 22px 0;
+      }
+      .bar .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .logo {
+        width: 30px;
+        height: 30px;
+        border-radius: 9px;
+        background: var(--brand);
+        display: grid;
+        place-items: center;
+      }
+      .logo svg {
+        width: 18px;
+        height: 18px;
+      }
+      .bar a.mail {
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      /* hero */
+      .hero {
+        padding: 40px 0 56px;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 56px;
+        align-items: center;
+      }
+      h1 {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: clamp(2.5rem, 6vw, 4.2rem);
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+        color: var(--ink);
+        margin: 0 0 20px;
+      }
+      .lede {
+        font-size: 1.2rem;
+        max-width: 34ch;
+        margin: 0 0 22px;
+      }
+      .updated {
+        display: inline-block;
+        font-size: 0.9rem;
+        color: var(--muted);
+        background: var(--card);
+        border: 1px solid var(--line);
+        padding: 6px 14px;
+        border-radius: 99px;
+      }
+
+      /* the one memorable thing: the policy summarised as alt text on an image */
+      .frame {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 14px;
+        box-shadow: 0 30px 60px -30px rgba(91, 84, 240, 0.45);
+      }
+      .photo {
+        aspect-ratio: 4 / 3;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 72% 28%, #ffd9a8 0 11%, transparent 11.5%),
+          linear-gradient(160deg, #8d88ff 0%, #5b54f0 55%, #2e2a8f 100%);
+      }
+      .photo::before,
+      .photo::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background: #1b1840;
+      }
+      .photo::before {
+        left: -6%;
+        width: 62%;
+        height: 42%;
+        clip-path: polygon(0 100%, 48% 0, 100% 100%);
+        opacity: 0.85;
+      }
+      .photo::after {
+        right: -8%;
+        width: 70%;
+        height: 30%;
+        clip-path: polygon(0 100%, 55% 0, 100% 100%);
+        background: #14123a;
+      }
+      .corner {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #fff;
+        z-index: 2;
+      }
+      .corner.tl {
+        top: 12px;
+        left: 12px;
+        border-right: 0;
+        border-bottom: 0;
+      }
+      .corner.tr {
+        top: 12px;
+        right: 12px;
+        border-left: 0;
+        border-bottom: 0;
+      }
+      .corner.bl {
+        bottom: 12px;
+        left: 12px;
+        border-right: 0;
+        border-top: 0;
+      }
+      .corner.br {
+        bottom: 12px;
+        right: 12px;
+        border-left: 0;
+        border-top: 0;
+      }
+      .alt {
+        margin: 14px 4px 4px;
+        font-size: 0.98rem;
+        line-height: 1.55;
+        color: var(--ink);
+        display: grid;
+        gap: 8px;
+      }
+      .alt b {
+        font-family: var(--display);
+        font-weight: 700;
+        color: var(--mint);
+        background: var(--mint-soft);
+        padding: 2px 10px;
+        border-radius: 6px;
+        width: fit-content;
+        font-size: 0.85rem;
+      }
+
+      /* layout */
+      .main {
+        padding: 24px 0 96px;
+      }
+      .main .wrap {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 56px;
+      }
+      nav.toc {
+        position: sticky;
+        top: 24px;
+        align-self: start;
+        font-size: 0.95rem;
+      }
+      nav.toc p {
+        margin: 0 0 10px;
+        font-family: var(--display);
+        font-weight: 700;
+        color: var(--ink);
+      }
+      nav.toc ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-left: 2px solid var(--line);
+      }
+      nav.toc a {
+        display: block;
+        padding: 5px 0 5px 16px;
+        margin-left: -2px;
+        border-left: 2px solid transparent;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      nav.toc a:hover {
+        color: var(--brand);
+        border-left-color: var(--brand);
+      }
+
+      article {
+        max-width: 66ch;
+      }
+      section {
+        padding-bottom: 44px;
+        scroll-margin-top: 24px;
+      }
+      h2 {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1.7rem;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        color: var(--ink);
+        margin: 0 0 14px;
+      }
+      p {
+        margin: 0 0 14px;
+      }
+      ul.list {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 12px;
+        margin: 18px 0;
+      }
+      ul.list li {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px 18px;
+      }
+      ul.list strong {
+        display: block;
+        color: var(--ink);
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .promise {
+        background: var(--brand-soft);
+        border-radius: 18px;
+        padding: 22px 24px;
+        margin: 18px 0;
+        color: var(--ink);
+      }
+      .promise p {
+        margin: 0;
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 0.98rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .scroll {
+        overflow-x: auto;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 32px 0 48px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      @media (max-width: 860px) {
+        .hero .wrap {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .main .wrap {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        nav.toc {
+          position: static;
+          background: var(--card);
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          padding: 16px 18px;
+        }
+        nav.toc ul {
+          border-left: 0;
+          columns: 2;
+        }
+        nav.toc a {
+          padding-left: 0;
+          border-left: 0;
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 480px) {
+        nav.toc ul {
+          columns: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="ImageAlt AI">
+          <span class="logo" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="16" rx="3" />
+              <path d="M3 16l5-5 4 4 3-3 6 6" />
+            </svg>
+          </span>
+          ImageAlt AI
+        </a>
+        <a class="mail" href="mailto:contact@enigmasystems.io">Contact us</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" style="padding-bottom: 56px">
+        <div class="wrap">
+          <div>
+            <h1>Privacy policy</h1>
+            <p class="lede">
+              We only touch your images to describe them. Here is exactly what
+              that means.
+            </p>
+            <span class="updated">Last updated: November 2026</span>
+          </div>
+
+          <figure class="frame" style="margin: 0">
+            <div
+              class="photo"
+              role="img"
+              aria-label="Illustration of a sunlit mountain landscape"
+            >
+              <span class="corner tl"></span><span class="corner tr"></span
+              ><span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <figcaption class="alt">
+              <b>Alt text</b>
+              <span
+                >ImageAlt AI reads your product images to write descriptions. It
+                never sells your store data or your customers’ data.</span
+              >
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="main">
+        <div class="wrap">
+          <nav class="toc" aria-label="Contents">
+            <p>On this page</p>
+            <ul>
+              <li><a href="#intro">Introduction</a></li>
+              <li><a href="#collect">What we collect</a></li>
+              <li><a href="#use">How we use it</a></li>
+              <li><a href="#sharing">Who processes it</a></li>
+              <li><a href="#retention">Retention and deletion</a></li>
+              <li><a href="#rights">Your rights</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#changes">Changes</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <article>
+            <section id="intro">
+              <h2>Introduction</h2>
+              <p>
+                Enigma Systems (“we”, “us”, or “our”) operates the ImageAlt AI
+                Shopify application (the “App”). This Privacy Policy explains
+                how we collect, use, and protect information when you use the
+                App.
+              </p>
+            </section>
+
+            <section id="collect">
+              <h2>What we collect</h2>
+              <p>
+                When you install and use the App, we access only the information
+                from your Shopify account that the App needs to work:
+              </p>
+              <ul class="list">
+                <li>
+                  <strong>Store information</strong>Your Shopify store domain,
+                  used to authenticate your session and manage your credits.
+                </li>
+                <li>
+                  <strong>Theme and product data</strong>Your images, used
+                  solely to compress them and generate alt text with AI.
+                </li>
+              </ul>
+            </section>
+
+            <section id="use">
+              <h2>How we use it</h2>
+              <p>
+                We use this data only to provide the App’s core features:
+                signing you in, tracking credits, compressing images, and
+                writing alt text.
+              </p>
+              <div class="promise">
+                <p>
+                  We do not sell, rent, or share your store data or customer
+                  data with third parties for marketing purposes.
+                </p>
+              </div>
+            </section>
+
+            <section id="sharing">
+              <h2>Who processes it</h2>
+              <p>
+                To generate alt text, your images are sent to the AI and hosting
+                services we use to run the App. These providers process data
+                only to deliver the service to us, and we do not allow them to
+                use it for their own marketing.
+              </p>
+            </section>
+
+            <section id="retention">
+              <h2>Retention and deletion</h2>
+              <p>
+                We keep your session data only while the App is installed. After
+                you uninstall, you can ask us to delete your data by contacting
+                us. We also comply with Shopify’s mandatory GDPR webhooks for
+                data requests and erasure:
+              </p>
+              <div class="scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Request</th>
+                      <th>What we do</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Customer data request</td>
+                      <td>We provide any customer data we hold.</td>
+                    </tr>
+                    <tr>
+                      <td>Customer erasure</td>
+                      <td>We delete any customer data we hold.</td>
+                    </tr>
+                    <tr>
+                      <td>Store erasure</td>
+                      <td>We delete your store’s data after uninstall.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section id="rights">
+              <h2>Your rights</h2>
+              <p>
+                Depending on where you live, you may have the right to access,
+                correct, export, or delete your personal information, or to
+                object to how it is used. Email us and we will respond as soon
+                as we can.
+              </p>
+            </section>
+
+            <section id="security">
+              <h2>Security</h2>
+              <p>
+                We use industry-standard safeguards, including encrypted
+                connections, to protect the data we handle. No system is
+                perfectly secure, but we limit what we collect so there is less
+                to protect.
+              </p>
+            </section>
+
+            <section id="changes">
+              <h2>Changes to this policy</h2>
+              <p>
+                If we change this policy, we will update the date at the top of
+                this page. For significant changes, we will also let you know
+                through the App or by email.
+              </p>
+            </section>
+
+            <section id="contact">
+              <h2>Contact us</h2>
+              <p>
+                Questions, deletion requests, or support:
+                <a href="mailto:contact@enigmasystems.io"
+                  >contact@enigmasystems.io</a
+                >
+              </p>
+            </section>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Enigma Systems. All rights reserved.</span>
+        <a href="mailto:contact@enigmasystems.io">contact@enigmasystems.io</a>
+      </div>
+    </footer>
+  </body>
+</html>
